@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
+const authorRoutes = require('./routes/author');
+app.use('/api/author', authorRoutes);
 
 // Routes
 const authRoutes = require('./routes/auth');
