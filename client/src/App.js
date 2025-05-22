@@ -1,12 +1,17 @@
 // client/src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
 
 function App() {
   return (
-    <div>
-      <h1>React App Reset</h1>
-      <p>Frontend is running. Login will be added later.</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<h2>Home - Go to /login</h2>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<h2>Dashboard placeholder</h2>} />
+      </Routes>
+    </Router>
   );
 }
 
